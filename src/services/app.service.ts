@@ -8,7 +8,7 @@ export class AppService {
   constructor(private readonly mailerService: MailerService) {}
 
 
-  public async SendEmail(name: string, email: string, application: string, fileName: string) {
+  public async SendEmail(name: string, email: string, application: string, fileName: string, fileType: string) {
 
     if(fileName != "") {
       await this.mailerService
@@ -22,7 +22,7 @@ export class AppService {
           application
         },
         attachments: [{
-          filename: "Uploaded",
+          filename: "Uploaded." + fileType,
           path: process.cwd() + "/uploads/" + fileName,
         }]
       })

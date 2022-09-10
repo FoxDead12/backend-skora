@@ -12,14 +12,15 @@ export class AppController {
   UploadNewFile(@UploadedFiles() file) {
 
     return {
-      name: file[0].filename
+      name: file[0].filename,
+      type: file[0].mimetype.split("/")[1]
     };
   }
   
   @Post("send-email")
   SenEmail( @Body() req) 
   {
-    this.appService.SendEmail(req.name, req.email, req.application, req.file);
+    this.appService.SendEmail(req.name, req.email, req.application, req.file, req.type);
   }
 }
- 
+  
