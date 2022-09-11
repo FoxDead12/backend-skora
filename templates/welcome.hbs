@@ -4,9 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nova Proposta</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <style>
+        :root {
+  
+        --collor-1: #5E503F;
+        --collor-2: #C6AC8F;
+        --collor-3: #EAE0D5;
+
+        }
+
+
+        html {
+        -webkit-text-size-adjust: 100%;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+            Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+            Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        line-height: 1.5;
+        tab-size: 4;
+        scroll-behavior: smooth;
+        }
+
+        body {
+
+            background-color: #EAE0D5;
+            height: 100vh;
+        }
+
+        *,
+        ::before,
+        ::after {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: currentColor;
+        margin: 0px;
+        padding: 0px;
+        }
+        h1,
+        h2 {
+        font-size: inherit;
+        font-weight: inherit;
+        }
+
+        h1 {
+
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem;
+            text-transform: uppercase;
+
+        }
+
+        h5 {
+
+            border-bottom: 1px solid black;
+        }
+
+        .container {
+
+            width: 100%;
+            height: 100vh;
+            background-color: #eee;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+
+            max-width: 450px;
+            width: 100%;
+            background-color: #C6AC8F;
+            box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .15);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .form h2 {
+
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>TTEMPLATE</h1>
+    <h1>Nova Proposta</h1>
+
+    <div class="container">
+
+        <div class="form">
+            <h2>Cliente</h2>
+
+            <div>
+                Nome: {{name}}
+            </div>
+
+            <div>
+                Email: {{email}}
+            </div>
+            
+            <div>
+                Application: {{application}}
+            </div>
+
+            <div>
+                {{description}}                
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>

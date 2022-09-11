@@ -8,7 +8,7 @@ export class AppService {
   constructor(private readonly mailerService: MailerService) {}
 
 
-  public async SendEmail(name: string, email: string, application: string, fileName: string, fileType: string) {
+  public async SendEmail(name: string, email: string, application: string, description: string, fileName: string, fileType: string) {
 
     if(fileName != "") {
       await this.mailerService
@@ -19,7 +19,8 @@ export class AppService {
           // Data to be sent to template engine.
           name,
           email,
-          application
+          application,
+          description
         },
         attachments: [{
           filename: "Uploaded." + fileType,
@@ -39,7 +40,8 @@ export class AppService {
           // Data to be sent to template engine.
           name,
           email,
-          application
+          application,
+          description
         }
       })
       .then((response) => {console.log(response)})

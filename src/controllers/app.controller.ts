@@ -20,7 +20,7 @@ export class AppController {
   @Post("send-email")
   SenEmail( @Body() req) 
   {
-    this.appService.SendEmail(req.name, req.email, req.application, req.file, req.type);
+    this.appService.SendEmail(req.name, req.email, req.application, req.description ,req.file, req.type);
   }
 }
   
