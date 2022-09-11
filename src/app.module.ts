@@ -27,7 +27,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         },
         defaults: {
           to: process.env.MAILDEV_FROM_EMAIL,
-          from: '"Skora 3D"',
+          from: '"Skora 3D" <no-reply@gmail.com>',
         },
         template: {
           dir: process.cwd() + '/templates/',

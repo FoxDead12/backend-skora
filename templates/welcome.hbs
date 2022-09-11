@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Proposta</title>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebarslatest/dist/handlebars.min.js"></script>
     <style>
         :root {
   
@@ -27,9 +27,7 @@
         }
 
         body {
-
-            background-color: #EAE0D5;
-            height: 100vh;
+            width: 100%;
         }
 
         *,
@@ -48,59 +46,17 @@
         font-weight: inherit;
         }
 
-        h1 {
-
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-            padding: 1rem;
-            text-transform: uppercase;
-
-        }
-
-        h5 {
-
-            border-bottom: 1px solid black;
-        }
-
-        .container {
-
-            width: 100%;
-            height: 100vh;
-            background-color: #eee;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .form {
-
-            max-width: 450px;
-            width: 100%;
-            background-color: #C6AC8F;
-            box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .15);
-            padding: 1rem;
-            border-radius: 5px;
-        }
-
-        .form h2 {
-
-            text-align: center;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-        }
+        
 
     </style>
 </head>
 <body>
-    <h1>Nova Proposta</h1>
 
     <div class="container">
 
         <div class="form">
-            <h2>Cliente</h2>
+            <h2>Dados</h2>
+            <br>
 
             <div>
                 Nome: {{name}}
@@ -111,10 +67,12 @@
             </div>
             
             <div>
-                Application: {{application}}
+                Aplicação: {{application}}
             </div>
+            <br>
 
             <div>
+                Descrição:<br>
                 {{description}}                
             </div>
         </div>

@@ -13,7 +13,7 @@ export class AppService {
     if(fileName != "") {
       await this.mailerService
       .sendMail({
-        subject: 'Testing Nest Mailermodule with template ✔',
+        subject: 'Nova Proposta ✔',
         template: 'welcome', // The `.pug`, `.ejs` or `.hbs` extension is appended automatically.
         context: {
           // Data to be sent to template engine.
@@ -34,7 +34,7 @@ export class AppService {
 
       await this.mailerService
       .sendMail({
-        subject: 'Testing Nest Mailermodule with template ✔',
+        subject: 'Nova Proposta ✔',
         template: 'welcome', // The `.pug`, `.ejs` or `.hbs` extension is appended automatically.
         context: {
           // Data to be sent to template engine.
